@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>نموذج طلب خدمة</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    form {
+      background: #1a1a1a;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background: #00f0ff;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 10px;
+      color: #000;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" class="logo">
+    <h1>طلب خدمة</h1>
+  </header>
+  <main>
+    <form onsubmit="submitRequest(event)">
+      <label>اسمك</label>
+      <input type="text" id="name" required>
+      <label>نوع الخدمة</label>
+      <input type="text" id="service" required>
+      <label>تفاصيل إضافية</label>
+      <textarea id="details" required></textarea>
+      <button type="submit">إرسال الطلب</button>
+    </form>
+  </main>
+  <footer><p>جميع الحقوق محفوظة &copy; EL_SAMURAI</p></footer>
+
+  <script>
+    function submitRequest(e) {
+      e.preventDefault();
+      alert("تم إرسال الطلب بنجاح!");
+      // Firebase integration can be added here if needed
+    }
+  </script>
+</body>
+</html>

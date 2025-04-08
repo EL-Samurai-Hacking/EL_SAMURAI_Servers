@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة تحكم EL_SAMURAI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .panel {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      background: #00f0ff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .status {
+      margin-top: 20px;
+      color: #0f0;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>لوحة التحكم</h1></header>
+  <div class="panel">
+    <button onclick="toggleTool()">تشغيل / إيقاف الأداة</button>
+    <button onclick="alert('عرض الطلبات قادم...')">عرض الطلبات</button>
+    <button onclick="alert('قائمة الحظر قادمة...')">إدارة الحظر</button>
+    <button onclick="alert('عدد المستخدمين: 23')">عرض الإحصائيات</button>
+    <p class="status" id="status">الحالة الحالية: الأداة مفعّلة</p>
+  </div>
+  <script>
+    let enabled = true;
+    function toggleTool() {
+      enabled = !enabled;
+      document.getElementById("status").innerText = "الحالة الحالية: " + (enabled ? "الأداة مفعّلة" : "الأداة موقوفة");
+    }
+  </script>
+</body>
+</html>

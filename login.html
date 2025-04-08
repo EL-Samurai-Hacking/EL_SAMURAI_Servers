@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل دخول المشرف</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .login-box {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    button {
+      background: #00f0ff;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>دخول المشرف</h1></header>
+  <div class="login-box">
+    <input type="text" id="username" placeholder="اسم المستخدم">
+    <input type="password" id="password" placeholder="كلمة المرور">
+    <button onclick="login()">دخول</button>
+  </div>
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      if (user === "admin" && pass === "1234") {
+        window.location.href = "admin.html";
+      } else {
+        alert("بيانات خاطئة");
+      }
+    }
+  </script>
+</body>
+</html>
